@@ -1,0 +1,326 @@
+\input{preambuloSimple.tex}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO Y DATOS DEL ALUMNO
+%----------------------------------------------------------------------------------------
+
+\title{	
+\normalfont \normalsize 
+\textsc{{\bf Visión por computador (2016-2017)} \\ Grado en Ingeniería Informática \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Cuestionario 3 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Ignacio Martín Requena} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+%----------------------------------------------------------------------------------------
+% DOCUMENTO
+%----------------------------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+ 
+
+\lstset{ frame=Ltb,
+     framerule=0pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+     framexleftmargin=0.4cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray97},
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\small\ttfamily,
+     commentstyle=\color{gray45},
+     keywordstyle=\bfseries,
+     %
+     numbers=left,
+     numbersep=15pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     breaklines=true,
+   }
+ 
+
+
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+ 
+\lstdefinestyle{C}
+   {language=C,
+   }
+   
+\setcounter{secnumdepth}{0} % sections are level 1
+
+\begin{document}
+
+\maketitle % Muestra el Título
+
+\newpage %inserta un salto de página
+
+\tableofcontents % para generar el índice de contenidos
+
+%\listoffigures
+
+
+\newpage
+
+
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 1
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 1}
+
+\subsubsection{Enunciado}
+
+En clase se ha mostrado una técnica para estimar el vector de traslación del movimiento de un par estéreo y solo ha podido estimarse su dirección. Argumentar de forma lógica a favor o en contra del hecho de que dicha restricción sea debida a la técnica usada o sea un problema inherente a la reconstrucción
+
+\subsubsection{Solución}
+
+  Esta restricción es debida a la técnica usada. Dicho método estima la matriz
+  esencial de la forma:
+  \[ [T]_x R R^T [T] = [T]_x [T] = \left(
+  \begin{array}{ccc}
+  T_y^2 + T_x^2 & -T_xT_y & -T_xT_z \\
+  -T_yT_x & T_z^2 + T_x^2 & -T_yT_z \\
+  -T_zT_x & -T_zT_y & T_z^2 + T_x^2 \\
+  \end{array}
+  \right) \]
+  Como vemos, en la matriz aparecen términos cuadráticos, por lo que al ir resolviendo el sistema $3\times3$ que sale dichos términos presentan ambigüedad en su signo al tomar raíces cuadradas, por lo que se toma uno cualquiera y después en el \textit{Algoritmo de Reconstrucción Euclídea} se corrige y, por tanto, podemos afirmar que no es algo inherente a la reconstrucción.
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 2
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 2}
+
+\subsubsection{Enunciado}
+
+Verificar matemáticamente que se deben de cumplir las ecuaciones Fe = 0, \textit{and} F $ ^{T} $e'=0
+
+
+\subsubsection{Solución}
+
+Si nos basamos en \emph{Hartley \& Zisselman}, para cada punto $x$ distinto de $e$, la línea
+epipolar $l'=Fx$ contiene el epipolo $e'$. Este epipolo cumple $e'^T(Fx)=(e'^TF)x=0$
+para cualquier $x$. Esto sólo puede darse si $e'^TF=0$, que significa que $e'$
+anula a $F^T$ por la izquierda. Análogamente para $e$, se determina que $Fe=0$,
+anulando $e$ a $F$ por la derecha.
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 3
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 3}
+
+\subsubsection{Enunciado}
+
+Verificar matemáticamente que cuando una cámara se desplaza las coordenadas retina de puntos correspondientes sobre la retina deben de verificar la ecuación x'= x + Kt/Z
+
+\subsubsection{Solución}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 4
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 4}
+
+\subsubsection{Enunciado}
+
+Dar una interpretación geométrica a las columnas y filas de la matriz P de una cámara.
+
+\subsubsection{Solución}
+
+En \emph{Multiple View Geometry in Computer Vision}, de Hartley y Zisserman, se da una descripción muy precisa de cada fila y columna de una matriz cámara $P$. Denotando $P^i$ a la i-ésima fila de la matriz y $p_j$ a la j-ésima columna, tenemos lo siguiente:
+
+\begin{itemize}
+	\item Las tres primeras columnas, $p_1$, $p_2$ y $p_3$ son puntos de fuga en la imagen que corresponden, respectivamente, a los ejes $X$, $Y$ y $Z$. 
+	
+	\item La última columna, $p_4$, es la imagen del origen de coordenadas.
+	
+	\item $P^1$ y $P^2$, primera y segunda filas de $P$, son planos en el espacio que contienen al centro de la cámara, y corresponden a los puntos cuya proyección se encuentra, respectivamente, en las líneas $x=0$ e $y=0$
+	\item La última fila de $P$, $P^3$, es el llamado plano principal de la cámara; es decir, el plano que pasa por el centro de la cámara y es paralelo al plano imagen.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 5
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 5}
+
+\subsubsection{Enunciado}
+
+Suponga una matriz A(3x3) de números reales. Suponga rango(A)=3. ¿Cuál es la matriz esencial más cercana a A en norma de Frobenius? Argumentar matemáticamente la derivación.
+
+\subsubsection{Solución}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 6
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 6}
+
+\subsubsection{Enunciado}
+
+Discutir cuales son las ventajas y desventajas de usar un algoritmo de reconstrucción Euclídea que calcule la profundidad de varios puntos a la vez en lugar de uno a uno.
+
+\subsubsection{Solución}
+
+
+En principio, lo lógico sería pensar que con un algoritmo de ese tipo mejoraríamos la precisión del cálculo de la profundidad de cada punto. Sin embargo, esto no tiene ningún sentido: las profundidades de los puntos son independientes las unas de las otras, y la precisión de su cálculo no se verá lógicamente afectada por el aumento de puntos.
+
+Sin embargo, el calcular profundidades lo podemos usar para algo en principio diferente: así, cuantos más puntos tengamos en cuenta a la vez, mejor será la aproximación de los parámetros extrínsecos de la cámara. Es decir, cuantos más puntos tengamos, mejor será la estimación de la matriz y por tanto de los parámetros.
+
+En cuanto a las desventajas, cuanto más puntos haya, más costosos serán todos los cálculos y, aunque ganemos en precisión, perderemos en eficiencia como es obvio.
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 7
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 7}
+
+\subsubsection{Enunciado}
+
+Deducir la expresión para la matriz Esencial E = [t]$ _{x} $R = R[R$ ^{T} $t]$ _{x} $. Justificar cada uno de los pasos.
+
+\subsubsection{Solución}
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 8
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 8}
+
+\subsubsection{Enunciado}
+
+Dada una pareja de cámaras cualesquiera, ¿existen puntos del espacio que no tengan un plano epipolar asociado? Justificar la respuesta
+
+\subsubsection{Solución}
+
+No, por tres puntos cualesquiera siempre hay un plano único (siempre que no esten alineados, si lo estan habrá infinitos planos) que pasa por estos.
+%----------------------------------------------------------------------------------------
+%	Cuestion 9
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 9}
+
+\subsubsection{Enunciado}
+
+Si nos dan las coordenadas de proyección de un punto escena en la cámara-1 y nos dicen cuál es el movimiento relativo de la cámara-2 respecto de la cámara-1, ¿es posible reconstruir la profundidad el punto si las cámaras están calibradas?. Justificar la contestación
+
+
+\subsubsection{Solución}
+
+No, para reconstruir el punto escena $p$ necesitamos también su proyección en la segunda cámara.
+
+Aunque podemos obtener la segunda cámara a partir de la primera, pues sabemos su movimiento relativo, para realizar el cálculo del punto escena necesitamos los dos rayos que nos definan la intersección donde está $p$.
+
+El primer rayo, correspondiente a la primera imagen, lo tenemos. El segundo rayo no, pues aunque conocemos la segunda cámara no conocemos la proyección de $p$ por ella.
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 10
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 10}
+
+\subsubsection{Enunciado}
+
+Suponga que obtiene una foto de una escena y la cámara gira para obtener otra foto ¿Cuál es la ecuación que liga las coordenadas de la proyecciones en ambas imágenes, de un mismo punto escena, en términos de los parámetros de las cámaras. Justificar matemáticamente 
+
+\subsubsection{Solución}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 11
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 11}
+
+\subsubsection{Enunciado}
+
+Suponga una cámara Afín. Discutir cuales son los efectos de la proyección ortogonal sobre los parámetros intrínsecos y extrínsecos de la cámara 
+
+\subsubsection{Solución}
+
+Una forma para determinar un criterio es el de imponer un umbral de distancia para que, si la distancia entre dos descriptores de dos puntos está por debajo del umbral fijado los marcamos como en correspondencia.
+
+%----------------------------------------------------------------------------------------
+%	Cuestion 12
+%----------------------------------------------------------------------------------------
+
+\section{Cuestión 12}
+
+\subsubsection{Enunciado}
+
+Dadas dos cámaras calibradas, P=K[I|0] y P'=K'[R|t]. Calcular la expresión de la matriz fundamental en términos de los parámetros intrínsecos y extrínsecos de las cámaras. Todos lospasos deben ser justificados
+
+\subsubsection{Solución}
+
+
+Hartley y Zisserman desarrollan varios cálculos en los que obtienen la matriz fundamental a partir de diversas formas. Entre ellas, se encuentra la siguiente deducción:
+
+Llamando $P^+$ a la pseudo-inversa de $P$; es decir, aquella matriz tal que $P^+ P = I$, su expresión es
+\[
+P^+ = \left[\begin{array}{c}
+K^{-1} \\
+0^T
+\end{array}\right]
+\]
+
+El centro de la cámara $P$, definido por $PC = 0$ es
+\[
+C = \left(\begin{array}{c}
+0 \\
+1
+\end{array}\right)
+\]
+
+Si suponemos la familia de soluciones para $X$ de la ecuación $PX = x$, con $x$ punto de la imagen, podemos coger dos puntos que se encuentran en el rayo solución; a saber: $P^+x$ y el centro de la cámara $P$: el punto $C$.
+
+Las proyecciones de estos dos puntos por la cámara $P'$ nos dan dos puntos: $P'P^+x$ y $P'C$, que definen la línea epipolar:
+\[
+l' = (P'C) \times (P'P^+x)
+\]
+
+Podemos escribir la ecuación anterior como
+\[
+l' =[P'C]_x(P'P^+)x
+\]
+
+Esto nos da la definición de matriz fundamental, $F = [P'C]_x(P'P^+)$.
+
+Podemos ahora sustituir $P$ y $P'$ por las definiciones del enunciado y operar:
+\begin{align*}
+	F &= [P'C]_x(P'P^+) = \\
+	&= [(K'[R|t])C]_x(K'[R|t]\left[\begin{array}{c}
+		K^-1 \\
+		0^T
+	\end{array}\right]) = \\
+	&= [K't]_xK'RK^{-1}
+\end{align*}
+
+Llegamos así a una expresión de $F$ en función únicamente de $K$, parámetros intrínsecos de la cámara y $R$ y $t$, parámetros extrínsecos.
+
+\end{document}

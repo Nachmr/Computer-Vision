@@ -1,0 +1,13 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Ejercicio 1}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Enunciado}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Comentarios sobre el desarrollo}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Salidas obtenidas}{6}{subsection.1.3}
+\contentsline {section}{\numberline {2}Ejercicio 2}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Enunciado}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Comentarios sobre el desarrollo}{7}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Salidas obtenidas}{9}{subsection.2.3}
+\contentsline {section}{\numberline {3}Ejercicio 3}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Enunciado}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Comentarios sobre el desarrollo}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Salidas obtenidas}{11}{subsection.3.3}

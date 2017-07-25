@@ -1,0 +1,18 @@
+\select@language {spanish}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Lectura imagenes}}{4}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Matriz harris a vector ordenado}}{5}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Dibujado de circulo en cada punto Harris}}{5}{figure.1.3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Puntos Harris obtenidos}}{6}{figure.1.4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Par\IeC {\'a}metros de entrada funci\IeC {\'o}n ejercicio 2}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces C\IeC {\'o}digo principal usando detector KAZE}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces C\IeC {\'a}lculo de los keypoints y descriptores}}{8}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Funci\IeC {\'o}n para determinar los puntos en comun entre dos imagenes}}{8}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Correspondencias usando KAZE, crossCheck activado y limite de correspondencia 1}}{9}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Correspondencias usando AKAZE, crossCheck activado y limite de correspondencia 1}}{9}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Datos obtenidos ejercicio 2}}{9}{figure.2.7}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces C\IeC {\'o}digo de la funci\IeC {\'o}n principal que crea el mosaico}}{10}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces C\IeC {\'o}digo de la funci\IeC {\'o}n que calcula todo lo necesario para unir una imagen de entrada con el mosaico principal}}{11}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Mosaico ETSIIT}}{11}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Salida texto mosaico ETSIIT}}{12}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Mosaico Yosemite}}{12}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Salida texto mosaico yosemite}}{13}{figure.3.6}

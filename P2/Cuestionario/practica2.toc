@@ -1,0 +1,43 @@
+\select@language {spanish}
+\contentsline {section}{Cuesti\IeC {\'o}n 1}{4}{Doc-Start}
+\contentsline {subsubsection}{Enunciado}{4}{section*.1}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{4}{section*.1}
+\contentsline {section}{Cuesti\IeC {\'o}n 2}{5}{figure.0.1}
+\contentsline {subsubsection}{Enunciado}{5}{section*.2}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{5}{section*.2}
+\contentsline {section}{Cuesti\IeC {\'o}n 3}{5}{section*.2}
+\contentsline {subsubsection}{Enunciado}{5}{section*.3}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{5}{section*.3}
+\contentsline {section}{Cuesti\IeC {\'o}n 4}{5}{section*.3}
+\contentsline {subsubsection}{Enunciado}{5}{section*.4}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{5}{section*.4}
+\contentsline {section}{Cuesti\IeC {\'o}n 5}{6}{section*.4}
+\contentsline {subsubsection}{Enunciado}{6}{section*.5}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{6}{section*.5}
+\contentsline {section}{Cuesti\IeC {\'o}n 6}{7}{figure.0.2}
+\contentsline {subsubsection}{Enunciado}{7}{section*.6}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{7}{section*.6}
+\contentsline {section}{Cuesti\IeC {\'o}n 7}{7}{section*.6}
+\contentsline {subsubsection}{Enunciado}{7}{section*.7}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{8}{section*.7}
+\contentsline {section}{Cuesti\IeC {\'o}n 8}{8}{section*.7}
+\contentsline {subsubsection}{Enunciado}{8}{section*.8}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{8}{section*.8}
+\contentsline {section}{Cuesti\IeC {\'o}n 9}{8}{section*.8}
+\contentsline {subsubsection}{Enunciado}{8}{section*.9}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{8}{section*.9}
+\contentsline {section}{Cuesti\IeC {\'o}n 10}{8}{section*.9}
+\contentsline {subsubsection}{Enunciado}{8}{section*.10}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{9}{section*.10}
+\contentsline {section}{Cuesti\IeC {\'o}n 11}{9}{section*.10}
+\contentsline {subsubsection}{Enunciado}{9}{section*.11}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{9}{section*.11}
+\contentsline {section}{Cuesti\IeC {\'o}n 12}{9}{section*.11}
+\contentsline {subsubsection}{Enunciado}{9}{section*.12}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{9}{section*.12}
+\contentsline {section}{Cuesti\IeC {\'o}n 13}{10}{section*.12}
+\contentsline {subsubsection}{Enunciado}{10}{section*.13}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{10}{section*.13}
+\contentsline {section}{Cuesti\IeC {\'o}n 14}{10}{section*.13}
+\contentsline {subsubsection}{Enunciado}{10}{section*.14}
+\contentsline {subsubsection}{Soluci\IeC {\'o}n}{10}{section*.14}

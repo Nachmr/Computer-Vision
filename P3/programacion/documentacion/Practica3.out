@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Estimaci\363n de la matriz de una c\341mara a partir del conjunto de puntos en correspondencias}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Generar la matriz de una c\341mara finita P a partir de valores aleatorios en [0,1] . Verificar si representa una c\341mara finita y en ese caso qued\341rsela.}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Suponer un patr\363n de puntos del mundo 3D compuesto por el conjunto de puntos con coordenadas \(0,x1,x2\) y \(x2,x1,0\), para x1=0.1:0.1:1 y x2=0.1:0.1:1. Esto supone una rejilla de puntos en dos planos distintos ortogonales}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Proyectar el conjunto de puntos del mundo con la c\341mara simulada y obtener las coordenadas p\355xel de su proyecci\363n.}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Implementar el algoritmo DLT para estimar la c\341mara P a partir de los puntos 3D y sus proyecciones en la imagen.}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Calcular el error de la estimaci\363n usando la norma de Frobenius \(cuadr\341tica\)}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Calibraci\363n de la c\341mara usando homograf\355as}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Escribir una funci\363n que sea capaz de ir leyendo las sucesivas im\341genes en chessboard.rar y determine cu\341les son v\341lidas para calibrar una c\341mara. Usar las 25 im\341genes tiff que se incluyen en el fichero datos. Usar la funci\363n cv::findChessboardCorners\(\). Determinar valores precisos de las coordenadas de las esquinas presentes en las im\341genes seleccionadas usando cv::cornerSubpix\(\). Pintar sobre la imagen los puntos estimados usando la funci\363n cv::drawChessboardCorners\(\) \( ver c\363digo de ayuda en la documentaci\363n de OpenCV\)}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Usando las coordenadas de los puntos extra\355dos en las im\341genes seleccionadas del punto anterior, calcular los valores de los par\341metros intr\355nsecos y extr\355nsecos de la c\341mara para cada una de dichas im\341genes. Usar la funci\363n cv::calibrateCamera\(\). Suponer dos situaciones: a\) sin distorsi\363n \363ptica y b\) con distorsi\363n \363ptica. Valorar la influencia de la distorsi\363n \363ptica en la calibraci\363n y la influencia de la distorsi\363n radial frente a la distorsi\363n tangencial.}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Estimaci\363n de la matriz fundamental F}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Obtener puntos en correspondencias sobre las im\341genes Vmort[*].pgm de forma autom\341tica usando las funciones de BRISK/ORB}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Calcular F por el algoritmo de los 8 puntos + RANSAC \(usar un valor peque\361o para el error de RANSAC\)}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Dibujar las l\355neas epipolares sobre ambas im\341genes \( <200\).}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Verificar la bondad de la F estimada calculando la media de la distancia ortogonal entre los puntos soporte y sus l\355neas epipolares en ambas im\341genes. Mostrar el valor medio del error.}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Calcular el movimiento de la c\341mara \(R,t\) asociado a cada pareja de im\341genes calibradas.}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Usar las im\341genes y datos de calibraci\363n dados en el fichero reconstruccion.rar}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Calcular parejas de puntos en correspondencias entre las im\341genes}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.3}{Estimar la matriz esencial y calcular el movimiento.}{section.4}% 18
